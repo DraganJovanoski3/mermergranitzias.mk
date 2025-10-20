@@ -426,10 +426,10 @@ $products = array_merge($products, [
     // Sculpture Products
     [
         'id' => 'sculpture-marble-1',
-        'name' => 'Скулптура Мербер Бист',
+        'name' => 'Скулптура Мермер',
         'category' => 'sculpture-tombstones',
-        'description' => 'Елегантен мермерен бист во класичен стил, изработен од најквалитетен мермер.',
-        'long_description' => 'Нашите мермерни бистови се изработени од најквалитетен мермер со прецизна обработка. Идеални за декоративни цели и колекционерски предмети.',
+        'description' => 'Скулптуa oд мермерен во класичен стил, изработен од најквалитетен мермер.',
+        'long_description' => 'Нашите Скулптури се изработени од најквалитетен мермер со прецизна обработка. Идеални за декоративни цели и колекционерски предмети.',
         'features' => ['Класичен дизајн', 'Висока прецизност', 'Елегантен изглед', 'Трајност'],
         'applications' => ['Декорација', 'Колекционерски предмети', 'Споменици', 'Интериерни детали'],
         'images' => ['sculptures/sculpture (1).jpg'],
@@ -440,7 +440,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-14',
-        'name' => 'Скулптура Мербер 14',
+        'name' => 'Скулптура Мермер 14',
         'category' => 'sculpture-tombstones',
         'description' => 'Модерна апстрактна скулптура од мермер со уникатен дизајн.',
         'long_description' => 'Нашите мермерни апстрактни скулптури се изработени од најквалитетен мермер со модерен дизајн. Идеални за современ ентериер и екстериер.',
@@ -468,7 +468,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-15',
-        'name' => 'Скулптура Мербер 15',
+        'name' => 'Скулптура Мермер 15',
         'category' => 'sculpture-tombstones',
         'description' => 'Трајна мермерна спомен скулптура за спомен цели.',
         'long_description' => 'Нашите мермерни спомен скулптури се изработени од најквалитетен мермер со фокус на трајност и елеганција. Идеални за спомен цели и меморијали.',
@@ -482,7 +482,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-3',
-        'name' => 'Скулптура Мербер Религиозна',
+        'name' => 'Скулптура Мермер Религиозна',
         'category' => 'sculpture-tombstones',
         'description' => 'Сакрална мермерна скулптура за религиозни цели.',
         'long_description' => 'Нашите мермерни религиозни скулптури се изработени со голема прецизност и почит кон традицијата. Идеални за цркви, манастири и приватни сакрални простори.',
@@ -496,7 +496,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-16',
-        'name' => 'Скулптура Мербер 16',
+        'name' => 'Скулптура Мермер 16',
         'category' => 'sculpture-tombstones',
         'description' => 'Елегантна мермерна фонтана скулптура за градини и јавни простори.',
         'long_description' => 'Нашите мермерни фонтана скулптури комбинираат уметнички дизајн со функционалност. Идеални за градини, паркови и јавни простори.',
@@ -510,7 +510,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-99',
-        'name' => 'Скулптура Мербер Прилагодена',
+        'name' => 'Скулптура Мермер Прилагодена',
         'category' => 'sculpture-tombstones',
         'description' => 'Прилагодена мермерна скулптура според вашите спецификации.',
         'long_description' => 'Нашите прилагодени мермерни скулптури се изработуваат според вашите спецификации и дизајн. Работиме со клиентите за да создадеме уникатни уметнички дела.',
@@ -524,7 +524,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-17',
-        'name' => 'Скулптура Мербер 17',
+        'name' => 'Скулптура Мермер 17',
         'category' => 'sculpture-tombstones',
         'description' => 'Монументална мермерна архитектонска скулптура за јавни простори.',
         'long_description' => 'Нашите мермерни архитектонски скулптури се дизајнирани за јавни простори и монументални проекти. Комбинираат уметнички дизајн со архитектонска функционалност.',
@@ -540,7 +540,7 @@ $products = array_merge($products, [
     // Individual Sculpture Products (one for each image)
     [
         'id' => 'sculpture-marble-1',
-        'name' => 'Скулптура Мербер 1',
+        'name' => 'Скулптура Мермер 1',
         'category' => 'sculpture-tombstones',
         'description' => 'Елегантна мермерна скулптура со уметнички дизајн.',
         'long_description' => 'Уметничка мермерна скулптура изработена од најквалитетен мермер со прецизна обработка.',
@@ -552,7 +552,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-2',
-        'name' => 'Скулптура Мербер 2',
+        'name' => 'Скулптура Мермер 2',
         'category' => 'sculpture-tombstones',
         'description' => 'Уникатна мермерна скулптура со модерен дизајн.',
         'long_description' => 'Модерна мермерна скулптура која комбинира традиционални техники со современ дизајн.',
@@ -564,7 +564,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-3',
-        'name' => 'Скулптура Мербер 3',
+        'name' => 'Скулптура Мермер 3',
         'category' => 'sculpture-tombstones',
         'description' => 'Класична мермерна скулптура со традиционален дизајн.',
         'long_description' => 'Традиционална мермерна скулптура која го одразува класичниот уметнички стил.',
@@ -576,7 +576,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-5',
-        'name' => 'Скулптура Мербер 5',
+        'name' => 'Скулптура Мермер 5',
         'category' => 'sculpture-tombstones',
         'description' => 'Апстрактна мермерна скулптура со современ дизајн.',
         'long_description' => 'Апстрактна мермерна скулптура која претставува современ уметнички израз.',
@@ -588,7 +588,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-6',
-        'name' => 'Скулптура Мербер 6',
+        'name' => 'Скулптура Мермер 6',
         'category' => 'sculpture-tombstones',
         'description' => 'Декоративна мермерна скулптура за градини.',
         'long_description' => 'Декоративна мермерна скулптура специјално дизајнирана за градински простори.',
@@ -600,7 +600,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-8',
-        'name' => 'Скулптура Мербер 8',
+        'name' => 'Скулптура Мермер 8',
         'category' => 'sculpture-tombstones',
         'description' => 'Фигуративна мермерна скулптура со реалистичен дизајн.',
         'long_description' => 'Реалистична фигуративна мермерна скулптура која претставува високо ниво на уметничка прецизност.',
@@ -612,7 +612,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-10',
-        'name' => 'Скулптура Мербер 10',
+        'name' => 'Скулптура Мермер 10',
         'category' => 'sculpture-tombstones',
         'description' => 'Монументална мермерна скулптура за јавни простори.',
         'long_description' => 'Голема монументална мермерна скулптура дизајнирана за јавни простори и монументални проекти.',
@@ -624,7 +624,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-11',
-        'name' => 'Скулптура Мербер 11',
+        'name' => 'Скулптура Мермер 11',
         'category' => 'sculpture-tombstones',
         'description' => 'Елегантна мермерна скулптура со фини детали.',
         'long_description' => 'Прецизно изработена мермерна скулптура со внимателно обработени детали.',
@@ -636,7 +636,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-13',
-        'name' => 'Скулптура Мербер 13',
+        'name' => 'Скулптура Мермер 13',
         'category' => 'sculpture-tombstones',
         'description' => 'Современа мермерна скулптура со минималистички дизајн.',
         'long_description' => 'Минималистичка мермерна скулптура која го одразува современ уметнички вкус.',
@@ -884,7 +884,7 @@ function getProductSlug($product) {
     $latin = mkTransliterateToLatin($baseName);
     $latin = strtolower($latin);
     // Replace specific terms to be consistent
-    $latin = str_replace(['мермер', 'granit', 'granite', 'marble'], ['mermer', 'granit', 'granit', 'mermer'], $latin);
+    $latin = str_replace(['мермер', 'granit', 'granite', 'marble'], ['Мермер ', 'granit', 'granit', 'Мермер '], $latin);
     // Normalize
     $slug = preg_replace('/[^a-z0-9]+/i', '-', $latin);
     $slug = trim($slug, '-');
