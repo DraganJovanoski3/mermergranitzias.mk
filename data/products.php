@@ -8,7 +8,7 @@ $products = [];
 $products = array_merge($products, [
     [
         'id' => 'marble-carrara-white',
-        'name' => 'Carrara White Мермер',
+        'name' => 'Carrara White',
         'category' => 'marble',
         'description' => 'Класичен бел мермер од Италија со елегантни сиви вени.',
         'long_description' => 'Carrara White е премиум мермер од Италија, познат по својата чиста бела боја и фини сиви вени. Одличен за луксузни ентериери.',
@@ -22,7 +22,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'marble-statuario',
-        'name' => 'Statuario Мермер',
+        'name' => 'Statuario',
         'category' => 'marble',
         'description' => 'Премиум бел мермер со златни вени од Италија.',
         'long_description' => 'Statuario е еден од најлуксузните мермери од Италија, со карактеристични златни вени на бела основа.',
@@ -36,7 +36,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'marble-calacatta-gold',
-        'name' => 'Calacatta Gold Мермер',
+        'name' => 'Calacatta Gold',
         'category' => 'marble',
         'description' => 'Бел мермер со златни вени од Италија.',
         'long_description' => 'Calacatta Gold е мермер со интензивни златни вени на бела основа. Впечатлив за луксузни проекти.',
@@ -50,7 +50,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'marble-emperador-dark',
-        'name' => 'Emperador Dark Мермер',
+        'name' => 'Emperador Dark',
         'category' => 'marble',
         'description' => 'Темно кафеав мермер со бели вени од Шпанија.',
         'long_description' => 'Emperador Dark е мермер со богата кафеава боја и контрастни бели вени. Одличен за модерни ентериери.',
@@ -64,7 +64,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'marble-botticino',
-        'name' => 'Botticino Мермер',
+        'name' => 'Botticino',
         'category' => 'marble',
         'description' => 'Беж мермер со топла нијанса од Италија.',
         'long_description' => 'Botticino е мермер со топла беж нијанса и фини вени. Создава топла и пријатна атмосфера.',
@@ -78,7 +78,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'marble-rosso-levanto',
-        'name' => 'Rosso Levanto Мермер',
+        'name' => 'Rosso Levanto',
         'category' => 'marble',
         'description' => 'Црвен мермер со бели вени од Италија.',
         'long_description' => 'Rosso Levanto е мермер со интензивна црвена боја и контрастни бели вени. Впечатлив за специјални проекти.',
@@ -96,7 +96,7 @@ $products = array_merge($products, [
 $products = array_merge($products, [
     [
         'id' => 'granite-rosa-beta',
-        'name' => 'Rosa Beta Гранит',
+        'name' => 'Rosa Beta',
         'category' => 'granite',
         'description' => 'Класичен сив гранит од Сардинија со униформна текстура.',
         'long_description' => 'Rosa Beta е гранит од Сардинија, Италија, познат по својата униформна сиво-розева текстура со ситни зрна. Одличен за екстериер и интериер поради високата издржливост.',
@@ -110,7 +110,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-g664-bainbrook-brown',
-        'name' => 'G664 (Bainbrook Brown) Гранит',
+        'name' => 'G664 (Bainbrook Brown)',
         'category' => 'granite',
         'description' => 'Кафеав гранит од Кина со равномерна зрнеста структура.',
         'long_description' => 'G664, познат и како Bainbrook Brown, е кинески гранит со топла кафеава нијанса и униформна текстура. Често се користи за плочи и степеници.',
@@ -124,7 +124,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-balmoral-red',
-        'name' => 'Balmoral Red Гранит',
+        'name' => 'Balmoral Red',
         'category' => 'granite',
         'description' => 'Длабоко црвен гранит од Финска со висока густина.',
         'long_description' => 'Balmoral Red е фински гранит, познат по својата богата црвена боја и долготрајна стабилност. Идеален за високо-фреквентни површини.',
@@ -138,7 +138,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-g603',
-        'name' => 'G603 Гранит',
+        'name' => 'G603',
         'category' => 'granite',
         'description' => 'Светло сив кинески гранит (Bianco Crystal) со униформна зрнестост.',
         'long_description' => 'G603 е светло сив гранит од Кина, познат под името Bianco Crystal. Одличен избор за јавни и приватни проекти.',
@@ -152,7 +152,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-viscount-white',
-        'name' => 'Viscon White Гранит',
+        'name' => 'Viscon White',
         'category' => 'granite',
         'description' => 'Индиски сиво-бел гранит со динамични вени.',
         'long_description' => 'Viscon (Viscount) White е индиски гранит со контрастни сиви вени на бела основа. Популарен за модерни кујни и бањи.',
@@ -166,7 +166,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-vizag-blue',
-        'name' => 'Vizag Blue Гранит',
+        'name' => 'Vizag Blue',
         'category' => 'granite',
         'description' => 'Синкаво-сив индиски гранит со перлист ефект.',
         'long_description' => 'Vizag Blue е индиски гранит со синкаво-сиви тонови и флеки што рефлектираат светлина. Дава елегантен изглед.',
@@ -180,7 +180,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-blue-pearl',
-        'name' => 'Blue Pearl Гранит',
+        'name' => 'Blue Pearl',
         'category' => 'granite',
         'description' => 'Норвешки гранит со сини перла ефекти и силен металичен сјај.',
         'long_description' => 'Blue Pearl е премиум норвешки гранит со карактеристични сини перла-флеки. Одличен за луксузни ентериери.',
@@ -194,7 +194,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-multicolor-red',
-        'name' => 'Multicolor Гранит',
+        'name' => 'Multicolor',
         'category' => 'granite',
         'description' => 'Индиски мултиколор гранит со топли црвени и кафеави нијанси.',
         'long_description' => 'Multicolor (често Red Multicolor) е индиски гранит со динамичен микс на црвени и кафеави тонови. Издржлив и впечатлив.',
@@ -208,7 +208,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-crema-julia',
-        'name' => 'Crema Julia Гранит',
+        'name' => 'Crema Julia',
         'category' => 'granite',
         'description' => 'Шпански светло беж гранит со фина структура.',
         'long_description' => 'Crema Julia е гранит од Шпанија, светло беж со фина зрнестост. Се користи и за ентериер и екстериер.',
@@ -222,7 +222,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-emerald-pearl',
-        'name' => 'Emerald Pearl Гранит',
+        'name' => 'Emerald Pearl',
         'category' => 'granite',
         'description' => 'Норвешки темно зелен гранит со перла ефекти.',
         'long_description' => 'Emerald Pearl е гранит со длабоко зелена основа и перла-ефект. Премиум избор за луксузни површини.',
@@ -236,7 +236,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-african-red',
-        'name' => 'Red Africa Гранит',
+        'name' => 'Red Africa',
         'category' => 'granite',
         'description' => 'Богат црвен гранит од Јужна Африка со висока издржливост.',
         'long_description' => 'Red Africa е гранит со интензивна црвена боја и темни флеки. Одличен за екстериерни апликации.',
@@ -250,7 +250,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-zimbabwe-black',
-        'name' => 'Zimbabwe Black Гранит',
+        'name' => 'Zimbabwe Black',
         'category' => 'granite',
         'description' => 'Финозрнест црн гранит од Зимбабве со униформен изглед.',
         'long_description' => 'Zimbabwe Black е црн гранит со висока густина и елегантен мат сјај. Многу популарен за работни плочи.',
@@ -264,7 +264,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-star-galaxy',
-        'name' => 'Star Galaxy Гранит',
+        'name' => 'Star Galaxy',
         'category' => 'granite',
         'description' => 'Црн индиски гранит со златести флеки – ефект на „ѕвездено небо“.',
         'long_description' => 'Star Galaxy од Индија е познат по своите бронзено-златни точки на длабока црна основа. Впечатлив и луксузен.',
@@ -278,7 +278,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-impala',
-        'name' => 'Impala Гранит',
+        'name' => 'Impala',
         'category' => 'granite',
         'description' => 'Темно сив јужноафрикански гранит со униформен образец.',
         'long_description' => 'Impala (најчесто од RSA) е издржлив гранит со неутрална боја, погоден за разни примени.',
@@ -292,7 +292,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-rosa-porrino',
-        'name' => 'Rosa Porrino Гранит',
+        'name' => 'Rosa Porrino',
         'category' => 'granite',
         'description' => 'Шпански розев гранит со униформна зрнестост.',
         'long_description' => 'Rosa Porrino (Галиција, Шпанија) е познат по топлата розева нијанса и униформната структура. Одличен за големи површини.',
@@ -306,7 +306,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-guna-black',
-        'name' => 'Guna Black Гранит',
+        'name' => 'Guna Black',
         'category' => 'granite',
         'description' => 'Длабок црн гранит со фина зрнестост.',
         'long_description' => 'Guna Black е црн гранит со униформна фина структура. Одличен за елегантни, минималистички решенија.',
@@ -320,7 +320,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-shanxi-black',
-        'name' => 'Shanxi Black Гранит',
+        'name' => 'Shanxi Black',
         'category' => 'granite',
         'description' => 'Кинески премиум црн гранит со униформен изглед.',
         'long_description' => 'Shanxi Black е познат по својата чиста црна боја и одлична завршна обработка. Високо ценет за луксузни апликации.',
@@ -336,7 +336,7 @@ $products = array_merge($products, [
     // Kitchen Products
     [
         'id' => 'marble-kitchen-countertop',
-        'name' => 'Мермерна кујнска работна плоча',
+        'name' => 'Кујнска работна плоча',
         'category' => 'kitchen',
         'description' => 'Елегантна мермерна работна плоча за кујна со висококвалитетна обработка.',
         'long_description' => 'Нашите мермерни кујнски работни плочи се изработени од најквалитетен мермер со прецизна обработка. Идеални за модерни кујни што бараат елеганција и функционалност.',
@@ -350,7 +350,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-kitchen-countertop',
-        'name' => 'Гранитна кујнска работна плоча',
+        'name' => 'Кујнска работна плоча',
         'category' => 'kitchen',
         'description' => 'Трајна гранитна работна плоча за кујна со извонредна издржливост.',
         'long_description' => 'Гранитните кујнски работни плочи се познати по својата извонредна издржливост и отпорност на гребење. Совршени за активни кујни што бараат трајност.',
@@ -366,7 +366,7 @@ $products = array_merge($products, [
     // Bathroom Products
     [
         'id' => 'marble-bathroom-vanity',
-        'name' => 'Мермерна бања',
+        'name' => 'Бањски шкафчиња',
         'category' => 'bathroom',
         'description' => 'Луксузна мермерна бања со елегантен дизајн.',
         'long_description' => 'Нашите мермерни бањски шкафчиња комбинираат елеганција со функционалност. Изработени од висококвалитетен мермер со прецизна обработка.',
@@ -380,7 +380,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-bathroom-vanity',
-        'name' => 'Гранитна бања',
+        'name' => 'Бањски шкафчиња',
         'category' => 'bathroom',
         'description' => 'Модерна гранитна бања со извонредна издржливост.',
         'long_description' => 'Гранитните бањски шкафчиња се познати по својата извонредна издржливост и отпорност на влага. Совршени за модерни бањи.',
@@ -396,7 +396,7 @@ $products = array_merge($products, [
     // Floor Products
     [
         'id' => 'marble-floor-tiles',
-        'name' => 'Мермерни подни плочи',
+        'name' => 'Подни плочи',
         'category' => 'floor',
         'description' => 'Елегантни мермерни подни плочи за луксузни ентериери.',
         'long_description' => 'Нашите мермерни подни плочи се изработени од најквалитетен мермер со прецизна обработка. Идеални за луксузни ентериери што бараат елеганција.',
@@ -410,7 +410,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'granite-floor-tiles',
-        'name' => 'Гранитни подни плочи',
+        'name' => 'Подни плочи',
         'category' => 'floor',
         'description' => 'Трајни гранитни подни плочи за интензивна употреба.',
         'long_description' => 'Гранитните подни плочи се познати по својата извонредна издржливост и отпорност на абење. Совршени за интензивна употреба во јавни и приватни простори.',
@@ -426,7 +426,7 @@ $products = array_merge($products, [
     // Sculpture Products
     [
         'id' => 'sculpture-marble-1',
-        'name' => 'Класичен мермерен бист',
+        'name' => 'Класичен бист',
         'category' => 'sculpture-tombstones',
         'description' => 'Елегантен мермерен бист во класичен стил, изработен од најквалитетен мермер.',
         'long_description' => 'Нашите мермерни бистови се изработени од најквалитетен мермер со прецизна обработка. Идеални за декоративни цели и колекционерски предмети.',
@@ -440,7 +440,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-granite-1',
-        'name' => 'Апстрактна гранитна скулптура',
+        'name' => 'Апстрактна скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Модерна апстрактна скулптура од гранит со уникатен дизајн.',
         'long_description' => 'Нашите гранитни апстрактни скулптури се изработени од најквалитетен гранит со модерен дизајн. Идеални за современ ентериер и екстериер.',
@@ -454,7 +454,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-2',
-        'name' => 'Мермерна животинска скулптура',
+        'name' => 'Животинска скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Детална мермерна скулптура на животни со реалистичен изглед.',
         'long_description' => 'Нашите мермерни животински скулптури се изработени со голема прецизност и внимание кон детали. Идеални за градини и декоративни цели.',
@@ -468,7 +468,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-granite-2',
-        'name' => 'Гранитна спомен скулптура',
+        'name' => 'Спомен скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Трајна гранитна спомен скулптура за спомен цели.',
         'long_description' => 'Нашите гранитни спомен скулптури се изработени од најквалитетен гранит со фокус на трајност и елеганција. Идеални за спомен цели и меморијали.',
@@ -482,7 +482,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-3',
-        'name' => 'Мермерна религиозна скулптура',
+        'name' => 'Религиозна скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Сакрална мермерна скулптура за религиозни цели.',
         'long_description' => 'Нашите мермерни религиозни скулптури се изработени со голема прецизност и почит кон традицијата. Идеални за цркви, манастири и приватни сакрални простори.',
@@ -496,7 +496,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-granite-3',
-        'name' => 'Гранитна фонтана скулптура',
+        'name' => 'Фонтана скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Елегантна гранитна фонтана скулптура за градини и јавни простори.',
         'long_description' => 'Нашите гранитни фонтана скулптури комбинираат уметнички дизајн со функционалност. Идеални за градини, паркови и јавни простори.',
@@ -510,7 +510,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-marble-99',
-        'name' => 'Прилагодена мермерна скулптура',
+        'name' => 'Прилагодена скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Прилагодена мермерна скулптура според вашите спецификации.',
         'long_description' => 'Нашите прилагодени мермерни скулптури се изработуваат според вашите спецификации и дизајн. Работиме со клиентите за да создадеме уникатни уметнички дела.',
@@ -524,7 +524,7 @@ $products = array_merge($products, [
     ],
     [
         'id' => 'sculpture-granite-4',
-        'name' => 'Гранитна архитектонска скулптура',
+        'name' => 'Архитектонска скулптура',
         'category' => 'sculpture-tombstones',
         'description' => 'Монументална гранитна архитектонска скулптура за јавни простори.',
         'long_description' => 'Нашите гранитни архитектонски скулптури се дизајнирани за јавни простори и монументални проекти. Комбинираат уметнички дизајн со архитектонска функционалност.',
