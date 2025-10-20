@@ -884,7 +884,7 @@ function getProductSlug($product) {
     $latin = mkTransliterateToLatin($baseName);
     $latin = strtolower($latin);
     // Replace specific terms to be consistent
-    $latin = str_replace(['мермер', 'granit', 'granite', 'marble'], ['Мермер ', 'granit', 'granit', 'Мермер '], $latin);
+    $latin = str_replace(['мермер', 'granit', 'granite', 'marble'], ['mermer', 'granit', 'granit', 'mermer'], $latin);
     // Normalize
     $slug = preg_replace('/[^a-z0-9]+/i', '-', $latin);
     $slug = trim($slug, '-');
