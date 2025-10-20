@@ -24,22 +24,7 @@ if (!empty($_GET['legacyCategory'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php 
-    // Calculate the correct base path
-    $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
-    $host = $_SERVER['HTTP_HOST'];
-    $script_name = $_SERVER['SCRIPT_NAME'];
-    
-    // If we're accessing via friendly URL, we need to determine the base path
-    if (strpos($_SERVER['REQUEST_URI'], '/proizvodi/') !== false) {
-        // We're on a friendly URL, so the base should be the root
-        $base_path = $protocol . '://' . $host . '/ziasmermergranit/';
-    } else {
-        // We're on a regular PHP file
-        $base_path = $protocol . '://' . $host . dirname($script_name) . '/';
-    }
-    ?>
-    <base href="<?php echo $base_path; ?>">
+    <base href="/">
     <title><?php echo t('page_products'); ?> - <?php echo t('hero_title'); ?> | Мермер, Гранит, Скулптури | Скопје, Македонија</title>
     <meta name="description" content="<?php echo t('products_subtitle'); ?> - <?php echo t('hero_description'); ?> Откријте ги нашите мермерни и гранитни материјали, скулптури и споменици. Професионална обработка во Скопје, Македонија.">
     <meta name="keywords" content="мермер, гранит, кујнски рабови, скулптури, споменици, материјали, мермерни плочи, гранитни плочи, кујнски работни плочи, бањски шкафчиња, облоги, подови, фасади, скали, декоративни површини, Скопје, Македонија, ZiasMermerGranit, обработка на камен">

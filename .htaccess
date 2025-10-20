@@ -1,7 +1,7 @@
 RewriteEngine On
 
-# Base path - remove this line when uploading to cPanel root
-# RewriteBase /ziasmermergranit/
+# Base path for production (root directory)
+RewriteBase /
 
 # Products listing with category slug (optional enhancement)
 # /proizvodi -> products.php
