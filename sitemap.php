@@ -1,5 +1,7 @@
 <?php
 // Dynamic sitemap generator
+// Suppress any output before XML declaration
+ob_start();
 header('Content-Type: application/xml; charset=UTF-8');
 
 require_once __DIR__ . '/data/products.php';
@@ -42,6 +44,8 @@ foreach (getAllProducts() as $product) {
     ];
 }
 
+// Clean any output before XML declaration
+ob_clean();
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -54,5 +58,3 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
     </url>
 <?php endforeach; ?>
 </urlset>
-
-
