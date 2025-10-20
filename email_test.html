@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Test - ZiasMermerGranit</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .test-section h3 {
+            color: #333;
+            margin-top: 0;
+        }
+        button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #c0392b;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            display: none;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .loading {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .email-config {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .email-config h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .email-config ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .email-config li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Email Configuration Test</h1>
+        
+        <div class="email-config">
+            <h4>Email Server Configuration:</h4>
+            <ul>
+                <li><strong>To:</strong> info@mermergranitzias.mk</li>
+                <li><strong>From:</strong> noreply@mermergranitzias.mk</li>
+                <li><strong>SMTP Server:</strong> mail.mermergranitzias.mk</li>
+                <li><strong>SMTP Port:</strong> 465 (SSL)</li>
+                <li><strong>Security:</strong> SSL/TLS</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h3>1. Test Basic PHP</h3>
+            <p>Test if PHP is working correctly on the server.</p>
+            <button onclick="testBasicPHP()">Test Basic PHP</button>
+            <div id="basic-result" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>2. Test Simple Email</h3>
+            <p>Test basic email functionality without complex features.</p>
+            <button onclick="testSimpleEmail()">Test Simple Email</button>
+            <div id="simple-result" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>3. Test Multiple SMTP Configurations</h3>
+            <p>Test different SMTP configurations to find the best working setup.</p>
+            <button onclick="testMultipleSMTP()">Test Multiple SMTP Configs</button>
+            <div id="smtp-result" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>4. Test Email Configuration</h3>
+            <p>Test if the email server configuration is working properly.</p>
+            <button onclick="testEmailConfig()">Test Email Configuration</button>
+            <div id="config-result" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>5. Test Contact Form</h3>
+            <p>Test the contact form functionality with sample data.</p>
+            <button onclick="testContactForm()">Test Contact Form</button>
+            <div id="contact-result" class="result"></div>
+        </div>
+
+        <div class="test-section">
+            <h3>6. Test Enhanced Contact Form</h3>
+            <p>Test the enhanced contact form with additional features.</p>
+            <button onclick="testEnhancedContactForm()">Test Enhanced Contact Form</button>
+            <div id="enhanced-result" class="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function showResult(elementId, message, type) {
+            const element = document.getElementById(elementId);
+            element.textContent = message;
+            element.className = `result ${type}`;
+            element.style.display = 'block';
+        }
+
+        function testBasicPHP() {
+            showResult('basic-result', 'Testing basic PHP...', 'loading');
+            
+            fetch('simple_test.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showResult('basic-result', 
+                            `✅ ${data.message}\n\nDetails:\n` +
+                            `• PHP Version: ${data.data.php_version}\n` +
+                            `• Server: ${data.data.server}\n` +
+                            `• Method: ${data.data.method}\n` +
+                            `• Time: ${data.data.time}`, 'success');
+                    } else {
+                        showResult('basic-result', 
+                            `❌ ${data.message}\n\nError: ${JSON.stringify(data.error)}`, 'error');
+                    }
+                })
+                .catch(error => {
+                    showResult('basic-result', `❌ Network error: ${error.message}`, 'error');
+                });
+        }
+
+        function testSimpleEmail() {
+            showResult('simple-result', 'Testing simple email...', 'loading');
+            
+            fetch('simple_email_test.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showResult('simple-result', 
+                            `✅ ${data.message}\n\nDetails:\n` +
+                            `• To: ${data.details.to}\n` +
+                            `• Subject: ${data.details.subject}\n` +
+                            `• Time: ${data.details.time}\n` +
+                            `• SMTP Server: ${data.details.smtp_server}\n` +
+                            `• SMTP Port: ${data.details.smtp_port}`, 'success');
+                    } else {
+                        showResult('simple-result', 
+                            `❌ ${data.message}\n\nError: ${JSON.stringify(data.error)}`, 'error');
+                    }
+                })
+                .catch(error => {
+                    showResult('simple-result', `❌ Network error: ${error.message}`, 'error');
+                });
+        }
+
+        function testMultipleSMTP() {
+            showResult('smtp-result', 'Testing multiple SMTP configurations...', 'loading');
+            
+            fetch('smtp_test.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        let resultText = `✅ ${data.message}\n\n`;
+                        resultText += `Summary:\n`;
+                        resultText += `• Total Tests: ${data.summary.total_tests}\n`;
+                        resultText += `• Successful: ${data.summary.successful_tests}\n`;
+                        resultText += `• Failed: ${data.summary.failed_tests}\n\n`;
+                        resultText += `Detailed Results:\n`;
+                        
+                        data.results.forEach((result, index) => {
+                            resultText += `${index + 1}. ${result.config_name}\n`;
+                            resultText += `   • Server: ${result.smtp_server}:${result.smtp_port}\n`;
+                            resultText += `   • Status: ${result.success ? '✅ Success' : '❌ Failed'}\n`;
+                            if (!result.success && result.error) {
+                                resultText += `   • Error: ${result.error.message}\n`;
+                            }
+                            resultText += `   • Time: ${result.time}\n\n`;
+                        });
+                        
+                        showResult('smtp-result', resultText, data.summary.successful_tests > 0 ? 'success' : 'error');
+                    } else {
+                        showResult('smtp-result', `❌ ${data.message}`, 'error');
+                    }
+                })
+                .catch(error => {
+                    showResult('smtp-result', `❌ Network error: ${error.message}`, 'error');
+                });
+        }
+
+        function testEmailConfig() {
+            showResult('config-result', 'Testing email configuration...', 'loading');
+            
+            fetch('test_email_config.php')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        showResult('config-result', 
+                            `✅ ${data.message}\n\nDetails:\n` +
+                            `• To: ${data.details.to}\n` +
+                            `• From: ${data.details.from}\n` +
+                            `• Server: ${data.details.server}\n` +
+                            `• Port: ${data.details.port}\n` +
+                            `• Security: ${data.details.secure}\n` +
+                            `• Time: ${data.details.time}`, 'success');
+                    } else {
+                        showResult('config-result', 
+                            `❌ ${data.message}\n\nError: ${JSON.stringify(data.error)}\n\nDetails:\n` +
+                            `• To: ${data.details.to}\n` +
+                            `• From: ${data.details.from}\n` +
+                            `• Server: ${data.details.server}\n` +
+                            `• Port: ${data.details.port}`, 'error');
+                    }
+                })
+                .catch(error => {
+                    showResult('config-result', `❌ Network error: ${error.message}`, 'error');
+                });
+        }
+
+        function testContactForm() {
+            showResult('contact-result', 'Testing contact form...', 'loading');
+            
+            const formData = new FormData();
+            formData.append('name', 'Test User');
+            formData.append('email', 'test@example.com');
+            formData.append('phone', '+389 70 123 456');
+            formData.append('service', 'Мермерни подни плочи');
+            formData.append('message', 'Ова е тест порака за проверка на контакт формата.');
+            
+            fetch('process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showResult('contact-result', `✅ ${data.message}`, 'success');
+                } else {
+                    showResult('contact-result', `❌ ${data.message}`, 'error');
+                }
+            })
+            .catch(error => {
+                showResult('contact-result', `❌ Network error: ${error.message}`, 'error');
+            });
+        }
+
+        function testEnhancedContactForm() {
+            showResult('enhanced-result', 'Testing enhanced contact form...', 'loading');
+            
+            const formData = new FormData();
+            formData.append('name', 'Enhanced Test User');
+            formData.append('email', 'enhanced@example.com');
+            formData.append('phone', '+389 71 987 654');
+            formData.append('service', 'Гранитни кујнски рабови');
+            formData.append('message', 'Ова е тест порака за проверка на подобрената контакт форма со дополнителни функции.');
+            
+            fetch('process_contact_enhanced.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showResult('enhanced-result', `✅ ${data.message}`, 'success');
+                } else {
+                    showResult('enhanced-result', `❌ ${data.message}`, 'error');
+                }
+            })
+            .catch(error => {
+                showResult('enhanced-result', `❌ Network error: ${error.message}`, 'error');
+            });
+        }
+    </script>
+</body>
+</html>
