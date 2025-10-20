@@ -16,6 +16,7 @@ $current_page = 'contact';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <title><?php echo t('page_contact'); ?> - <?php echo t('hero_title'); ?> | Контакт Информации | Скопје, Македонија</title>
     <meta name="description" content="<?php echo t('contact_subtitle'); ?> - Контактирајте не за професионална обработка на мермер и гранит. Телефон: 078 654 050, Скопје, Македонија.">
     <meta name="keywords" content="контакт, мермер, гранит, Скопје, Македонија, телефон, адреса, ZiasMermerGranit, обработка на камен, кујнски рабови, скулптури, споменици, контакт форма, локација, работилница">

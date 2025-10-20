@@ -13,6 +13,7 @@ $current_lang = getCurrentLang();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <title><?php echo t('page_about'); ?> - <?php echo t('hero_title'); ?> | За Нас | Скопје, Македонија</title>
     <meta name="description" content="<?php echo t('about_description'); ?> - Дознајте повеќе за ZiasMermerGranit, нашата историја, искуство и професионална обработка на мермер и гранит во Скопје, Македонија.">
     <meta name="keywords" content="за нас, ZiasMermerGranit, историја, искуство, мермер, гранит, обработка на камен, Скопје, Македонија, професионални услуги, кујнски рабови, скулптури, споменици, тим, квалитет">

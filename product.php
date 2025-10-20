@@ -63,6 +63,7 @@ $meta_description = $product['description'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
     <title><?php echo htmlspecialchars($page_title); ?> | ZiasMermerGranit</title>
     <meta name="description" content="<?php echo htmlspecialchars($meta_description); ?> - <?php echo t('nav_products'); ?>: <?php echo getCategoryLabel($product['category']); ?>.">
     <meta name="keywords" content="<?php echo htmlspecialchars($product['name']); ?>, <?php echo getCategoryLabel($product['category']); ?>, <?php echo t('nav_products'); ?>, Zias Mermer Granit">
