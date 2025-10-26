@@ -1,15 +1,14 @@
 <?php
+// Set UTF-8 encoding
+header('Content-Type: text/html; charset=UTF-8');
+
 // Start session for language switching
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// Include translations
-require_once 'includes/translations.php';
-
-// Get current language
-$current_lang = getCurrentLang();
-
-// Set current page for navigation highlighting
-$current_page = 'home';
+// Include the home page content directly
+include 'home.php';
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $current_lang; ?>">

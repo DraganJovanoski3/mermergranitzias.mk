@@ -35,7 +35,9 @@ foreach ($categories as $cat) {
 }
 
 // Individual products via slug
-foreach (getAllProducts() as $product) {
+require_once 'admin/database_functions.php';
+$allProducts = getAllProductsFromDB('mk'); // Use Macedonian as default for sitemap
+foreach ($allProducts as $product) {
     $slug = getProductSlug($product);
     $urls[] = [
         'loc' => "$baseUrl/proizvod/" . rawurlencode($slug),

@@ -1,6 +1,8 @@
 <?php
 // Start session for language switching
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Include translations
 require_once 'includes/translations.php';
@@ -13,7 +15,7 @@ $current_lang = getCurrentLang();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/">
+    <base href="/ziasmermergranit/">
     <title><?php echo t('page_about'); ?> - <?php echo t('hero_title'); ?> | За Нас | Скопје, Македонија</title>
     <meta name="description" content="<?php echo t('about_description'); ?> - Дознајте повеќе за ZiasMermerGranit, нашата историја, искуство и професионална обработка на мермер и гранит во Скопје, Македонија.">
     <meta name="keywords" content="за нас, ZiasMermerGranit, историја, искуство, мермер, гранит, обработка на камен, Скопје, Македонија, професионални услуги, кујнски рабови, скулптури, споменици, тим, квалитет">
@@ -101,12 +103,10 @@ $current_lang = getCurrentLang();
     }
     </script>
     
-    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <?php include 'includes/navbar.php'; ?>
 
     <!-- Page Header -->

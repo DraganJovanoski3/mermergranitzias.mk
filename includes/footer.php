@@ -5,6 +5,7 @@
 // Include translations
 require_once 'includes/translations.php';
 ?>
+<link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-section">

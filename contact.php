@@ -1,6 +1,8 @@
 <?php
 // Start session for language switching
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 // Include translations
 require_once 'includes/translations.php';
@@ -14,6 +16,7 @@ $current_page = 'contact';
 <!DOCTYPE html>
 <html lang="<?php echo $current_lang; ?>">
 <head>
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">

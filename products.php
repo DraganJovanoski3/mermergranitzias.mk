@@ -1,10 +1,27 @@
 <?php
 // Start session for language switching
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// Include the products data and translations
-require_once 'data/products.php';
+// Include the database functions and translations
+require_once 'admin/database_functions.php';
 require_once 'includes/translations.php';
+
+// Helper function to get correct image path
+function getImagePath($image_path) {
+    if (empty($image_path)) {
+        return 'images/placeholder.jpg'; // Default placeholder
+    }
+    
+    // If it's already a full path (starts with uploads/ or images/), return as is
+    if (strpos($image_path, 'uploads/') === 0 || strpos($image_path, 'images/') === 0) {
+        return $image_path;
+    }
+    
+    // Otherwise, prepend images/ for legacy paths
+    return 'images/' . $image_path;
+}
 
 // Get current language
 $current_lang = getCurrentLang();
@@ -154,13 +171,10 @@ if (!empty($_GET['legacyCategory'])) {
         }
     }
     </script>
-    
-    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
     <?php include 'includes/navbar.php'; ?>
 
     <!-- Page Header -->
@@ -204,9 +218,9 @@ if (!empty($_GET['legacyCategory'])) {
                 <?php
                 // Server-side initial filtering for better UX and SEO
                 if ($category === 'all') {
-                    $displayProducts = getAllProducts();
+                    $displayProducts = getAllProductsFromDB($current_lang);
                 } else {
-                    $displayProducts = getProductsByCategory($category);
+                    $displayProducts = getProductsByCategoryFromDB($category, $current_lang);
                 }
 
                 foreach ($displayProducts as $product):
@@ -214,7 +228,7 @@ if (!empty($_GET['legacyCategory'])) {
                 <div class="product-item" data-category="<?php echo htmlspecialchars($product['category']); ?>">
                     <div class="product-image">
                         <?php if (isset($product['main_image']) && $product['main_image']): ?>
-                            <img src="images/<?php echo htmlspecialchars($product['main_image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <img src="<?php echo getImagePath($product['main_image']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
                         <?php else: ?>
                             <div class="placeholder-image">
                                 <i class="fas fa-gem"></i>

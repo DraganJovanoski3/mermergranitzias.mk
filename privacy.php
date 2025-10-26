@@ -8,6 +8,7 @@ $current_lang = getCurrentLang();
 <!DOCTYPE html>
 <html lang="<?php echo $current_lang; ?>">
 <head>
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo t('page_privacy'); ?></title>

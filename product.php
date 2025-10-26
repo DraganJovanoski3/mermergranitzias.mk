@@ -1,22 +1,27 @@
 <?php
 // Start session for language switching
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-// Include the products data and translations
-require_once 'data/products.php';
+// Include the database functions and translations
+require_once 'admin/database_functions.php';
 require_once 'includes/translations.php';
 
 // Accept either id or slug
 $product_id = isset($_GET['id']) ? $_GET['id'] : '';
 $product_slug = isset($_GET['slug']) ? $_GET['slug'] : '';
 
-// Get product data
+// Get current language
+$current_lang = getCurrentLang();
+
+// Get product data from database
 $product = null;
 if ($product_slug) {
-    $product = getProductBySlug($product_slug);
+    $product = getProductBySlugFromDB($product_slug, $current_lang);
 }
 if (!$product && $product_id) {
-    $product = getProductById($product_id);
+    $product = getProductByIdFromDB($product_id, $current_lang);
 }
 
 // If product found and accessed via id (not slug), redirect permanently to canonical friendly URL
@@ -35,6 +40,21 @@ if (!$product) {
 }
 
 // Set page title and meta description
+// Helper function to get correct image path
+function getImagePath($image_path) {
+    if (empty($image_path)) {
+        return 'images/placeholder.jpg'; // Default placeholder
+    }
+    
+    // If it's already a full path (starts with uploads/ or images/), return as is
+    if (strpos($image_path, 'uploads/') === 0 || strpos($image_path, 'images/') === 0) {
+        return $image_path;
+    }
+    
+    // Otherwise, prepend images/ for legacy paths
+    return 'images/' . $image_path;
+}
+
 // Helper to map category to human-readable label
 function getCategoryLabel($category) {
     switch ($category) {
@@ -61,6 +81,7 @@ $meta_description = $product['description'];
 <!DOCTYPE html>
 <html lang="<?php echo getCurrentLang(); ?>">
 <head>
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="/">
@@ -190,7 +211,7 @@ $meta_description = $product['description'];
                 <!-- Product Images -->
                 <div class="product-images">
                     <div class="main-image">
-                        <img src="images/<?php echo htmlspecialchars($product['main_image']); ?>" 
+                        <img src="<?php echo getImagePath($product['main_image']); ?>" 
                              alt="<?php echo htmlspecialchars($product['name']); ?>"
                              id="main-product-image">
                     </div>
@@ -199,7 +220,7 @@ $meta_description = $product['description'];
                     <div class="image-gallery">
                         <?php foreach ($images as $image): ?>
                         <div class="gallery-thumbnail">
-                            <img src="images/<?php echo htmlspecialchars($image); ?>" 
+                            <img src="<?php echo getImagePath($image); ?>" 
                                  alt="<?php echo htmlspecialchars($product['name']); ?>"
                                  onclick="changeMainImage(this.src)">
                         </div>
@@ -285,7 +306,7 @@ $meta_description = $product['description'];
             <h2>Слични производи</h2>
             <div class="related-grid">
                 <?php
-                $related_products = getProductsByCategory($product['category']);
+                $related_products = getProductsByCategoryFromDB($product['category'], $current_lang);
                 $count = 0;
                 foreach ($related_products as $related):
                     if ($related['id'] !== $product['id'] && $count < 3):
@@ -293,13 +314,14 @@ $meta_description = $product['description'];
                 ?>
                 <div class="related-item">
                     <div class="related-image">
-                        <img src="images/<?php echo htmlspecialchars($related['main_image']); ?>" 
+                        <img src="<?php echo getImagePath($related['main_image']); ?>" 
                              alt="<?php echo htmlspecialchars($related['name']); ?>">
                     </div>
                     <div class="related-info">
                         <h3><?php echo htmlspecialchars($related['name']); ?></h3>
                         <p><?php echo htmlspecialchars($related['description']); ?></p>
-                        <a href="product.php?id=<?php echo htmlspecialchars($related['id']); ?>" class="btn btn-small">
+                        <?php $related_slug = getProductSlug($related); ?>
+                        <a href="proizvod/<?php echo htmlspecialchars($related_slug); ?>" class="btn btn-small">
                             Види детали
                         </a>
                     </div>

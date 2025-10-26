@@ -25,7 +25,7 @@ $languages = [
 ];
 
 // Current page URL without language parameter
-$current_url = $_SERVER['REQUEST_URI'];
+$current_url = $_SERVER['REQUEST_URI'] ?? '/';
 $current_url = preg_replace('/[?&]lang=[^&]*/', '', $current_url);
 $current_url = rtrim($current_url, '?&');
 ?>

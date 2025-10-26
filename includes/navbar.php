@@ -3,11 +3,33 @@
 // This file can be included in any page using: include 'includes/navbar.php';
 
 // Include translations
-require_once 'includes/translations.php';
+$translations_path = __DIR__ . '/translations.php';
+if (file_exists($translations_path)) {
+    require_once $translations_path;
+} else {
+    // Fallback for admin folder
+    $admin_translations_path = dirname(__DIR__) . '/includes/translations.php';
+    if (file_exists($admin_translations_path)) {
+        require_once $admin_translations_path;
+    }
+}
 
 // Get current page for active navigation highlighting
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
+
+// Get current language and languages array
+$current_lang = getCurrentLang();
+$languages = [
+    'mk' => 'Македонски',
+    'en' => 'English', 
+    'sq' => 'Shqip'
+];
+
+// Get current URL for language switching
+$current_url = $_SERVER['REQUEST_URI'] ?? '/';
 ?>
+<link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+<link rel="stylesheet" href="admin/css/admin.css?v=<?php echo time(); ?>">
 <nav class="navbar">
     <div class="nav-container">
         <a href="home" class="nav-logo">
@@ -56,7 +78,18 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
         
         <div class="nav-right">
             <!-- Language Switcher -->
-            <?php include 'includes/language_switcher.php'; ?>
+            <?php 
+            $language_switcher_path = __DIR__ . '/language_switcher.php';
+            if (file_exists($language_switcher_path)) {
+                include $language_switcher_path;
+            } else {
+                // Fallback for admin folder
+                $admin_language_switcher_path = dirname(__DIR__) . '/includes/language_switcher.php';
+                if (file_exists($admin_language_switcher_path)) {
+                    include $admin_language_switcher_path;
+                }
+            }
+            ?>
             
             <div class="nav-contact">
                 <a href="tel:+38978654050" class="nav-phone">
